@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Growth Hacker TV</title>
+
+    <!-- Tailwind Setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50">
+      <nav class="bg-white border-gray-200 light text-black lg:px-20">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6"
+        >
+          <a href="#" class="flex items-center">
+            <img
+              src="./assets/media/image 4.png"
+              class="h-12 mr-3"
+              alt="Growth Hacker"
+            />
+            <span
+              class="self-center text-lg font-semibold whitespace-nowrap text-black"
+              >Growth Hacker TV</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div
+            class="hidden w-full flex flex-col md:flex-row md:flex md:items-center md:space-x-12 md:w-auto"
+            id="navbar-default"
+          >
+            <ul
+              class="font-semibold text-base flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-9 md:mt-0"
+            >
+              <li>
+                <a href="#" class="block text-black">Episode</a>
+              </li>
+              <li>
+                <a href="#" class="block text-black">Recipes</a>
+              </li>
+              <li>
+                <a href="#" class="block text-black">About</a>
+              </li>
+              <li>
+                <a href="#" class="block text-black">Contact Us</a>
+              </li>
+              <button>
+                <img src="./assets/media/Frame.svg" />
+              </button>
+            </ul>
+            <button
+              class="font-bold text-orange border border-red-text-orange rounded-full px-10 py-4"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Episodes -->
+    <section class="md:py-24 md:px-24">
+      <div class="swiper mySwiper max-w-screen-xl mx-auto">
+        <div class="flex flex-row justify-between items-center mb-10">
+          <h2 class="text-4xl font-bold">Latest Episodes</h2>
+          <div class="flex flex-row space-x-5">
+            <button
+              class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <path
+                  d="M12.1569 16.0954L7.0614 10.9998L12.1569 5.9043L13.4194 7.1668L9.5864 10.9998L13.4194 14.8329L12.1569 16.0954Z"
+                  fill="#626262"
+                />
+              </svg>
+            </button>
+            <button
+              class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <path
+                  d="M9.84307 16.0954L14.9386 10.9998L9.84307 5.9043L8.58057 7.1668L12.4136 10.9998L8.58057 14.8329L9.84307 16.0954Z"
+                  fill="#FF5802"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="swiper-wrapper h-[450px] rounded-2xl overflow-hidden">
+          <div
+            class="swiper-slide h-full flex justify-items-stretch items-stretch object-contain"
+          >
+            <video class="rounded-2xl">
+              <source src="./assets/media/vid.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="swiper-slide h-full flex justify-items-stretch items-stretch object-contain"
+          >
+            <video class="rounded-2xl">
+              <source src="./assets/media/vid.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipes -->
+    <section class="md:py-24 md:px-24">
+      <div class="max-w-screen-xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Discover Our Recipes</h2>
+
+        <div
+          class="grid grid-cols-4 gap-7 justify-items-stretch items-stretch text-white text-left"
+        >
+          <div
+            class="h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+          >
+            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
+            <p class="">by Anant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="md:py-24 md:px-24">
+      <div class="max-w-screen-xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16">Blog</h2>
+        <div class="grid grid-row-3 grid-cols-1 items-stretch">
+          <article
+            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+          >
+            <div class="col-span-3">
+              <div
+                class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
+              >
+                <div class="">by Jackson William</div>
+                <div class="">•</div>
+                <div class="">28 Jan 23</div>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">
+                Parenting Education for Your Child with Alexa Caroline
+              </h3>
+              <p class="text-gray mb-5">
+                Parenting can be both rewarding and challenging. While it is
+                natural to want to provide love and support for our children, it
+                is also important to establish boundaries and set limits.
+              </p>
+              <div class="flex flex-row space-x-1.5">
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  ARTICLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  PEOPLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  BUSINESS
+                </div>
+              </div>
+            </div>
+            <img
+              class="col-span-2 rounded-xl object-cover md:h-60"
+              src="https://www.figma.com/file/57dTccFWP2fuhDaR5wHaJJ/image/bb225e67865e1b6b4f29e96259a536bea23e244b?fuid=1006026373182984002"
+            />
+          </article>
+          <article
+            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+          >
+            <div class="col-span-3">
+              <div
+                class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
+              >
+                <div class="">by Jackson William</div>
+                <div class="">•</div>
+                <div class="">28 Jan 23</div>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">
+                Podcast to Grow Business
+              </h3>
+              <p class="text-gray mb-5">
+                Interview-style show: Invite experts and thought leaders in your
+                field to share their insights, experiences, and advice on
+                various topics related to your industry. Share your thoughts,
+                experiences, and knowledge on your area of expertise.You can
+                also share behind-the-scenes stories and lessons.
+              </p>
+              <div class="flex flex-row space-x-1.5">
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  ARTICLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  PEOPLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  BUSINESS
+                </div>
+              </div>
+            </div>
+            <img
+              class="col-span-2 rounded-xl object-cover md:h-60"
+              src="https://s3-alpha-sig.figma.com/img/6fa6/016d/e0832f86751d141e98a39de5cc1ac3e7?Expires=1692576000&Signature=ear5aBH33yNIC2IHj8AzWTXKJ-uYd6-YB1xcANa9mjdLM-kq3xJAU3XNiL14C-9kFxu-hxMxldyHEhVldIOJ4DTW9hVH5agQ19aDRtZVA23QAUJSVLyz7jzQg~sVI0K7zKRmGo2D~NDIkMHsNERKTKxaWMaKZxqARtvO-iGl-uxyhMwRJfN5bxk4f~JM~SoJi0Q2JiyzACHb2TuzLh~k4q2OtFGFWVurtu5JJWBZws4rrRtSkmXWfIubyyNxrRWt1oJXr3Z7jOIz1BQ7eve69s42KoJw5D7BA5~J7-0kdBV49SmxGT4jOzajubym7rl3Je3kcMM5KXm9JORBmp8TRw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            />
+          </article>
+          <article
+            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+          >
+            <div class="col-span-3">
+              <div
+                class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
+              >
+                <div class="">by Jackson William</div>
+                <div class="">•</div>
+                <div class="">28 Jan 23</div>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">
+                Social Media Life in 4.0 Industry
+              </h3>
+              <p class="text-gray mb-5">
+                Discuss the latest developments and changes in the social media
+                landscape, including updates to platform algorithms, new
+                features, and shifting user behaviors. Offer tips, advice, and
+                best practices for developing and executing successful social
+                media marketing campaigns.
+              </p>
+              <div class="flex flex-row space-x-1.5">
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  ARTICLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  PEOPLE
+                </div>
+                <div
+                  class="text-sm px-3.5 py-2.5 border border-gray rounded-full"
+                >
+                  BUSINESS
+                </div>
+              </div>
+            </div>
+            <img
+              class="col-span-2 rounded-xl object-cover md:h-60"
+              src="https://s3-alpha-sig.figma.com/img/a0b1/4c64/a4bea0008581adfa61a41ba8c45966ad?Expires=1692576000&Signature=HIWtqn7J927GpDC6sj8zwv-d8gLAKUzjUSn467ptRnAqWjUtNIS6B04AsUAIBQTkrXQg~N6-tYabKN367mWrwnb7zW4oTMPEGkmXAgaVyoM2ajcbD~zj~vhpUC77bmUQj557Twf-IRLyUYxM71qaV5c~iQOMWO7ZoZF3o9frvc7c05X06NNicMhczE9wA0BuP6DtEB76lsxlPZak7K0NpdFMH~EiUitFAUutHIC3Bb3cggQFsq-0PhNhnKwF6RSkqQa34sKAhAtd72rN8~8mDZ2R1AIP0Rft33csVE6cGAUn0plw6Pns6F2EtqC7sI~wwBwhOLZdZZwXfmNxt8FUmw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-20 pb-12">
+      <div
+        class="grid grid-cols-2 max-w-screen-xl mx-auto bg-footer-newsletter bg-cover bg-center text-white rounded-xl mb-20 md:px-16 md:py-14"
+      >
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Join Our Newsletter</h3>
+          <p class="text-base">
+            We’ll send you a nice letter once a week. No Spam
+          </p>
+        </div>
+        <form
+          class="grid grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 bg-white/30"
+        >
+          <input
+            class="col-span-2 bg-transparent placeholder:text-white focus:bg-transparent focus:outline-none pl-8"
+            type="email"
+            placeholder="Enter your email..."
+          />
+          <button
+            type="submit"
+            class="font-bold rounded-full py-3.5 px-9 bg-orange"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+      <div
+        class="grid grid-cols-3 grid-row-2 max-w-screen-xl gap-x-40 mx-auto mb-12 px-4 pb-20 border-b-2 border-smoke"
+      >
+        <div class="">
+          <a href="#" class="flex items-center mb-5">
+            <img
+              src="./assets/media/image 4.png"
+              class="h-12 mr-3"
+              alt="Growth Hacker"
+            />
+            <span
+              class="self-center text-lg font-semibold whitespace-nowrap text-black"
+              >Growth Hacker TV</span
+            >
+          </a>
+          <p class="text-base text-gray">
+            See episodes where the experts reveal their secrets on startup
+            growth.
+          </p>
+        </div>
+        <div class="col-span-2 flex flex-row justify-between space-x-100 pt-10">
+          <div>
+            <h4 class="text-xl font-semibold mb-5">Quick Links</h4>
+            <ul class="flex flex-col space-y-3 text-base text-gray">
+              <li class="">Home</li>
+              <li class="">Episode</li>
+              <li class="">Recipes</li>
+              <li class="">About</li>
+              <li class="">Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-5">Company</h4>
+            <ul class="flex flex-col space-y-3 text-base text-gray">
+              <li class="">E. hackergrowth@gmail.com</li>
+              <li class="">P. +62 9302 888</li>
+              <li class="">A. Baker St. 16, New York United States</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-5">Social Media</h4>
+            <ul class="flex flex-col space-y-3 text-base text-gray">
+              <li class="">Youtube</li>
+              <li class="">Facebook</li>
+              <li class="">Instagram</li>
+              <li class="">Twitter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-base text-gray">
+        ©Copyright Growth Hacker TV 2023. All Right Reserved
+      </p>
+    </footer>
+
+    <!-- Flowbite navbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
