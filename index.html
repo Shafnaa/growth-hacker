@@ -26,17 +26,11 @@
 
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Swiper js -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <!-- Navbar -->
-    <header class="fixed w-full top-0 z-50">
-      <nav class="bg-transparent border-gray-200 light text-black lg:px-20">
+    <header class="fixed w-screen top-0 z-50">
+      <nav class="bg-white border-gray-200 light text-black px-2 lg:px-20">
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6"
         >
@@ -48,8 +42,9 @@
             />
             <span
               class="self-center text-lg font-semibold whitespace-nowrap text-black"
-              >Growth Hacker TV</span
             >
+              Growth Hacker TV
+            </span>
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -76,7 +71,7 @@
             </svg>
           </button>
           <div
-            class="hidden w-full flex flex-col md:flex-row md:flex md:items-center md:space-x-12 md:w-auto"
+            class="hidden w-full flex flex-col items-stretch text-center p-2 md:flex md:flex-row md:items-center md:space-x-12 md:w-auto"
             id="navbar-default"
           >
             <ul
@@ -109,7 +104,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="relative bg-softorange md:pt-32">
+    <section class="relative bg-softorange overflow-hidden pt-24 px-4 md:pt-32">
       <div class="text-center mb-16">
         <h1 class="text-[56px] mb-5 font-bold">Hey, we're Growth Hackers</h1>
         <p class="text-gray">
@@ -119,10 +114,10 @@
         </p>
         <div class="h-12"></div>
         <form
-          class="max-w-[550px] grid grid-cols-3 items-stretch justify-items-stretch text-base rounded-full p-1 bg-white mx-auto border border-smoke"
+          class="md:max-w-[550px] flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base rounded-full p-1 md:bg-white mx-auto md:border border-smoke"
         >
           <input
-            class="col-span-2 bg-transparent placeholder:text-gray focus:bg-transparent focus:outline-none pl-8"
+            class="h-12 md:col-span-2 md:bg-transparent placeholder:text-center md:placeholder:text-left placeholder:text-gray md:focus:bg-transparent rounded-full focus:outline-none md:pl-8"
             type="email"
             placeholder="Enter your email..."
           />
@@ -183,7 +178,7 @@
         </div>
         <img
           src="./assets/media/rect.svg"
-          class="w-full relative mt-[-60px] z-[2]"
+          class="absolute bottom-0 w-full min-h-8 object-cover object-center z-[2]"
         />
       </div>
 
@@ -243,12 +238,13 @@
 
     <!-- Episodes -->
     <section class="relative bg-white md:py-24 md:px-24">
-      <div class="swiper mySwiper max-w-screen-xl mx-auto">
+      <div class="slider-container max-w-screen-xl mx-auto">
         <div class="flex flex-row justify-between items-center mb-10">
           <h2 class="text-4xl font-bold">Latest Episodes</h2>
           <div class="flex flex-row space-x-5">
             <button
-              class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
+              id="slide-prev"
+              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +260,8 @@
               </svg>
             </button>
             <button
-              class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
+              id="slide-next"
+              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -281,16 +278,30 @@
             </button>
           </div>
         </div>
-        <div class="swiper-wrapper h-[450px] rounded-2xl overflow-hidden">
+        <div class="slides h-[450px] flex rounded-2xl overflow-hidden">
           <div
-            class="swiper-slide h-full flex justify-items-stretch items-stretch object-contain"
+            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
           >
             <video class="rounded-2xl" controls="controls">
               <source src="./assets/media/vid.mp4" type="video/mp4" />
             </video>
           </div>
           <div
-            class="swiper-slide h-full flex justify-items-stretch items-stretch object-contain"
+            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
+          >
+            <video class="rounded-2xl">
+              <source src="./assets/media/vid.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
+          >
+            <video class="rounded-2xl">
+              <source src="./assets/media/vid.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
           >
             <video class="rounded-2xl">
               <source src="./assets/media/vid.mp4" type="video/mp4" />
@@ -305,7 +316,7 @@
       <div class="max-w-screen-xl mx-auto text-center">
         <h2 class="text-4xl font-bold mb-8">Discover Our Recipes</h2>
         <div
-          class="filters flex flex-row space-x-3 justify-center mb-14"
+          class="filters flex flex-row space-x-3 md:justify-center mb-14 overflow-x-auto"
           id="sort-options"
         >
           <label name="filter">
@@ -510,19 +521,19 @@
 
     <!-- CTA -->
     <section
-      class="bg-[url('./assets/media/CTA.svg')] bg-cover bg-no-repeat py-36 px-10"
+      class="bg-[url('./assets/media/CTA.svg')] bg-cover bg-center bg-no-repeat py-16 px-4 md:py-36 md:px-10"
     >
       <div
-        class="max-w-screen-xl mx-auto grid grid-cols-2 gap-7 justify-items-stretch items-center text-white"
+        class="max-w-screen-xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-7 justify-items-stretch md:items-center text-white text-center md:text-left"
       >
-        <h2 class="text-4xl font-bold">
+        <h2 class="text-xl md:text-4xl font-bold">
           Get Latest Information about Hacker Growth TV
         </h2>
         <form
-          class="grid grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 bg-white/30"
+          class="flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
         >
           <input
-            class="col-span-2 bg-transparent placeholder:text-white focus:bg-transparent focus:outline-none pl-8"
+            class="h-12 rounded-full col-span-2 bg-white/30 placeholder:text-center md:placeholder:text-left md:bg-transparent placeholder:text-white md:focus:bg-transparent focus:outline-none md:pl-8"
             type="email"
             placeholder="Enter your email..."
           />
@@ -537,12 +548,12 @@
     </section>
 
     <!-- Blog -->
-    <section class="md:py-24 md:px-24">
+    <section class="py-8 px-4 md:py-24 md:px-24">
       <div class="max-w-screen-xl mx-auto">
         <h2 class="text-4xl font-bold mb-16">Blog</h2>
         <div class="grid grid-row-3 grid-cols-1 items-stretch">
           <article
-            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
             <div class="col-span-3">
               <div
@@ -584,7 +595,7 @@
             />
           </article>
           <article
-            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
             <div class="col-span-3">
               <div
@@ -628,7 +639,7 @@
             />
           </article>
           <article
-            class="grid grid-cols-5 gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
             <div class="col-span-3">
               <div
@@ -797,21 +808,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="pt-20 pb-12 px-10">
+    <footer class="py-8 px-4 md:pt-20 md:pb-12 md:px-10">
       <div
-        class="max-w-screen-xl grid grid-cols-2 items-center bg-footer-newsletter bg-cover bg-center text-white rounded-xl mx-auto mb-20 md:px-16 md:py-14"
+        class="max-w-screen-xl flex flex-col space-y-7 md:grid md:grid-cols-2 md:items-center bg-footer-newsletter bg-cover bg-center text-white rounded-xl mx-auto mb-20 py-10 px-5 md:px-16 md:py-14"
       >
-        <div>
+        <div class="text-center md:text-left">
           <h3 class="text-2xl font-bold mb-3">Join Our Newsletter</h3>
           <p class="text-base">
             We’ll send you a nice letter once a week. No Spam
           </p>
         </div>
         <form
-          class="grid grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 bg-white/30"
+          class="flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
         >
           <input
-            class="col-span-2 bg-transparent placeholder:text-white focus:bg-transparent focus:outline-none pl-8"
+            class="h-12 rounded-full col-span-2 bg-white/30 placeholder:text-center md:placeholder:text-left md:bg-transparent placeholder:text-white md:focus:bg-transparent focus:outline-none md:pl-8"
             type="email"
             placeholder="Enter your email..."
           />
@@ -819,12 +830,12 @@
             type="submit"
             class="font-bold rounded-full py-3.5 px-9 bg-orange"
           >
-            Subscribe
+            Sign Up
           </button>
         </form>
       </div>
       <div
-        class="grid grid-cols-3 grid-row-2 max-w-screen-xl gap-x-40 mx-auto mb-12 px-4 pb-20 border-b-2 border-smoke"
+        class="grid grid-cols-1 md:grid-cols-3 grid-row-2 max-w-screen-xl gap-x-40 mx-auto mb-12 px-4 pb-20 border-b-2 border-smoke"
       >
         <div class="">
           <a href="#" class="flex items-center mb-5">
@@ -843,7 +854,9 @@
             growth.
           </p>
         </div>
-        <div class="col-span-2 flex flex-row justify-between space-x-100 pt-10">
+        <div
+          class="col-span-1 md:col-span-2 flex flex-row flex-wrap justify-between space-y-5 space-x-100 pt-10"
+        >
           <div>
             <h4 class="text-xl font-semibold mb-5">Quick Links</h4>
             <ul class="flex flex-col space-y-3 text-base text-gray">
@@ -889,7 +902,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script src="./assets/scripts/swiper1.js"></script>
-    <script src="./assets/scripts/swiper2.js"></script>
+    <script src="./assets/scripts/slider1.js"></script>
   </body>
 </html>
