@@ -54,20 +54,26 @@ video.addEventListener("play", updatePlayIcon);
 video.addEventListener("timeupdate", updateProgressbar);
 progressbar.addEventListener("change", dragProgressbar);
 
-// $('input[type="range"]').change(function () {
-//   var val =
-//     ($(this).val() - $(this).attr("min")) /
-//     ($(this).attr("max") - $(this).attr("min"));
+//filter
 
-//   $(this).css(
-//     "background",
-//     "-webkit-gradient(linear, left top, right top, " +
-//       "color-stop(" +
-//       val +
-//       ", #bffa2e), " +
-//       "color-stop(" +
-//       val +
-//       ", rgba(255, 255, 255, 0.3))" +
-//       ")"
-//   );
-// });
+const filterContainer = document.querySelector(".filter-element");
+const recipes = document.querySelectorAll(".element-item");
+
+filterContainer.innerHTML = "";
+
+recipes.forEach((recipe) => {
+  if (filterContainer.childElementCount < 12) {
+    filterContainer.append(recipe.cloneNode(true));
+  }
+});
+
+function filteredResult(value) {
+  filterContainer.innerHTML = "";
+  recipes.forEach((recipe) => {
+    if (filterContainer.childElementCount < 12) {
+      if (recipe.classList.contains(value)) {
+        filterContainer.append(recipe.cloneNode(true));
+      }
+    }
+  });
+}

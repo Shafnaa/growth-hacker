@@ -32,7 +32,7 @@
     <header class="fixed w-screen top-0 z-50">
       <nav class="bg-white border-gray-200 light text-black px-2 lg:px-20">
         <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6"
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 md:py-6"
         >
           <a href="#" class="flex items-center">
             <img
@@ -106,18 +106,20 @@
     <!-- Hero -->
     <section class="relative bg-softorange overflow-hidden pt-24 px-4 md:pt-32">
       <div class="text-center mb-16">
-        <h1 class="text-[56px] mb-5 font-bold">Hey, we're Growth Hackers</h1>
-        <p class="text-gray">
+        <h1 class="text-4xl md:text-[56px] mb-5 font-bold">
+          Hey, we're Growth Hackers
+        </h1>
+        <p class="text-sm text-base text-gray">
           Ready To Grow Your Startup?<br />
           Sign up to see episodes where the experts reveal their secrets on
           startup growth.
         </p>
         <div class="h-12"></div>
         <form
-          class="md:max-w-[550px] flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base rounded-full p-1 md:bg-white mx-auto md:border border-smoke"
+          class="md:max-w-[550px] flex flex-col space-y-3 md:space-y-0 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base rounded-full p-1 md:bg-white mx-auto md:border md:border-smoke"
         >
           <input
-            class="h-12 md:col-span-2 md:bg-transparent placeholder:text-center md:placeholder:text-left placeholder:text-gray md:focus:bg-transparent rounded-full focus:outline-none md:pl-8"
+            class="h-12 md:col-span-2 md:bg-transparent placeholder:text-center md:placeholder:text-left placeholder:text-gray md:focus:bg-transparent rounded-full focus:outline-none border border-smoke md:border-0 md:pl-8"
             type="email"
             placeholder="Enter your email..."
           />
@@ -133,7 +135,7 @@
       <div class="">
         <div class="flex justify-center items-end">
           <div
-            class="w-[360px] h-[430px] rounded-2xl border-4 border-white rotate-[-18deg] z-[0] mr-[-120px]"
+            class="relative w-[360px] h-48 md:h-[430px] rounded-2xl border-4 border-white rotate-[-18deg] z-[0] mr-[-120px]"
           >
             <img
               src="https://s3-alpha-sig.figma.com/img/725c/5a75/0a4823408e096a3ac6feb4fdc4f8a348?Expires=1692576000&Signature=GRd8MAeNfK5sqRZKUXeyv6tlxp1aRwv57zeZ2jglAHNZGc8xduOs-T6fFduP8f1vCaLKtOIZcWjPugQPbPh1QsqgNCH8cEnwYfeLiMYYlzcrO1Tc39~zcPJSS6VD3G41-haZIGUvaNnpBKoxabgIYMgGe3KJzxx7-uGVid3luN-re18u87IHOGYXqrNnByn7rZ1L~ntrsD8nNDNmlC9OKYuN6tFypVFgMPnnUCf3FGAjSmAULkH8TDL89YD7p-i7UTS8UdRFgqdFMvBE3J4DOfSdZFTdIAsROikZCNDi7Wg2E1jHZ7~i~oAbU13Wu15TBVUDyMWLS3YU55XEUMBzwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -142,14 +144,14 @@
             />
           </div>
           <div
-            class="relative p-8 z-[1]"
+            class="relative p-3 md:p-8 z-[1]"
             style="
               background-image: url('./assets/media/ipad.png');
               background-size: 100%;
             "
           >
             <video
-              class="w-[720px] rounded-2xl"
+              class="w-[720px] rounded-lg md:rounded-2xl"
               src="./assets/media/vid.mp4"
               id="video"
             ></video>
@@ -167,7 +169,7 @@
             </div>
           </div>
           <div
-            class="w-[360px] h-[430px] rounded-2xl border-4 border-white rotate-[18deg] z-[0] ml-[-120px]"
+            class="relative w-[360px] h-48 md:h-[430px] rounded-2xl border-4 border-white rotate-[18deg] z-[0] ml-[-120px]"
           >
             <img
               src="https://s3-alpha-sig.figma.com/img/725c/5a75/0a4823408e096a3ac6feb4fdc4f8a348?Expires=1692576000&Signature=GRd8MAeNfK5sqRZKUXeyv6tlxp1aRwv57zeZ2jglAHNZGc8xduOs-T6fFduP8f1vCaLKtOIZcWjPugQPbPh1QsqgNCH8cEnwYfeLiMYYlzcrO1Tc39~zcPJSS6VD3G41-haZIGUvaNnpBKoxabgIYMgGe3KJzxx7-uGVid3luN-re18u87IHOGYXqrNnByn7rZ1L~ntrsD8nNDNmlC9OKYuN6tFypVFgMPnnUCf3FGAjSmAULkH8TDL89YD7p-i7UTS8UdRFgqdFMvBE3J4DOfSdZFTdIAsROikZCNDi7Wg2E1jHZ7~i~oAbU13Wu15TBVUDyMWLS3YU55XEUMBzwA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -237,14 +239,16 @@
     </section>
 
     <!-- Episodes -->
-    <section class="relative bg-white md:py-24 md:px-24">
-      <div class="slider-container max-w-screen-xl mx-auto">
-        <div class="flex flex-row justify-between items-center mb-10">
-          <h2 class="text-4xl font-bold">Latest Episodes</h2>
-          <div class="flex flex-row space-x-5">
+    <section class="relative bg-white py-10 px-4 md:py-24 md:px-24">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="md:flex md:flex-row md:justify-between items-center mb-10">
+          <h2 class="text-xl md:text-4xl text-center md:text-left font-bold">
+            Latest Episodes
+          </h2>
+          <div class="hidden md:flex flex-row space-x-5">
             <button
               id="slide-prev"
-              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
+              class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +265,7 @@
             </button>
             <button
               id="slide-next"
-              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
+              class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -278,49 +282,106 @@
             </button>
           </div>
         </div>
-        <div class="slides h-[450px] flex rounded-2xl overflow-hidden">
-          <div
-            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
-          >
-            <video class="rounded-2xl" controls="controls">
-              <source src="./assets/media/vid.mp4" type="video/mp4" />
-            </video>
+        <div class="mySwiper h-[450px] flex rounded-2xl overflow-hidden">
+          <div class="swiper-wrapper h-[450px] flex rounded-2xl">
+            <div
+              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+            >
+              <video class="h-full rounded-2xl" style="max-width: none">
+                <source
+                  src="./assets/media/videoplayback.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div
+              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+            >
+              <video class="h-full rounded-2xl" style="max-width: none">
+                <source
+                  src="./assets/media/videoplayback.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div
+              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+            >
+              <video class="h-full rounded-2xl" style="max-width: none">
+                <source
+                  src="./assets/media/videoplayback.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div
+              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+            >
+              <video class="h-full rounded-2xl" style="max-width: none">
+                <source
+                  src="./assets/media/videoplayback.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
-          <div
-            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
+        </div>
+        <div class="flex md:hidden flex-row justify-center space-x-5 pt-4">
+          <button
+            id="slide-prev"
+            class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
           >
-            <video class="rounded-2xl">
-              <source src="./assets/media/vid.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div
-            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M12.1569 16.0954L7.0614 10.9998L12.1569 5.9043L13.4194 7.1668L9.5864 10.9998L13.4194 14.8329L12.1569 16.0954Z"
+                fill="#626262"
+              />
+            </svg>
+          </button>
+          <button
+            id="slide-next"
+            class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
           >
-            <video class="rounded-2xl">
-              <source src="./assets/media/vid.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div
-            class="slide h-full w-2/5 flex justify-items-stretch items-stretch object-contain hidden"
-          >
-            <video class="rounded-2xl">
-              <source src="./assets/media/vid.mp4" type="video/mp4" />
-            </video>
-          </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M9.84307 16.0954L14.9386 10.9998L9.84307 5.9043L8.58057 7.1668L12.4136 10.9998L8.58057 14.8329L9.84307 16.0954Z"
+                fill="#FF5802"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Recipes -->
-    <section class="md:py-24 md:px-24">
+    <section class="py-10 px-4 md:py-24 md:px-24">
       <div class="max-w-screen-xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">Discover Our Recipes</h2>
+        <h2 class="text-xl md:text-4xl font-bold mb-5">Discover Our Recipes</h2>
         <div
           class="filters flex flex-row space-x-3 md:justify-center mb-14 overflow-x-auto"
           id="sort-options"
         >
-          <label name="filter">
-            <input type="radio" name="filter" value="all" checked />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="element-item"
+              checked
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -339,8 +400,14 @@
               <p class="mr-3">Latest</p>
             </div>
           </label>
-          <label name="filter">
-            <input type="radio" name="filter" value="People" />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="People"
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -359,8 +426,14 @@
               <p class="mr-3">People</p>
             </div>
           </label>
-          <label name="filter">
-            <input type="radio" name="filter" value="Podcast" />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="Podcast"
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -379,8 +452,14 @@
               <p class="mr-3">Podcast</p>
             </div>
           </label>
-          <label name="filter">
-            <input type="radio" name="filter" value="Blogging" />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="Blogging"
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -399,8 +478,14 @@
               <p class="mr-3">Blogging</p>
             </div>
           </label>
-          <label name="filter">
-            <input type="radio" name="filter" value="Entertainment" />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="Entertainment"
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -419,8 +504,14 @@
               <p class="mr-3">Entertainment</p>
             </div>
           </label>
-          <label name="filter">
-            <input type="radio" name="filter" value="Business" />
+          <label class="relative" name="filter">
+            <input
+              class="absolute"
+              onchange="filteredResult(value)"
+              type="radio"
+              name="filter"
+              value="Business"
+            />
             <div class="filter-label">
               <div class="filter-symbol">
                 <svg
@@ -441,80 +532,304 @@
           </label>
         </div>
         <div
-          class="filter-element grid grid-cols-4 gap-7 justify-items-stretch items-stretch text-white text-left"
+          class="filter-element grid grid-row-4 grid-cols-2 md:grid-row-3 md:grid-cols-4 gap-7 justify-items-stretch items-stretch text-white text-left"
         >
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item Entertainment h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item Business h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
-          <div
-            class="element-item People h-[262px] flex flex-col justify-end rounded-xl bg-recipes bg-cover bg-center p-5"
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
           >
-            <h4 class="font-bold">Legendary Hacks of AirBnB Technology</h4>
-            <p class="">by Anant</p>
-          </div>
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker-2"
+            class="Podcast element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/e2446dc36d946ce58ed8975dadcab3c2.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/digital-business"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/96658a3473202d4b09872a4891fc2a0f.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Digital Business</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/hubremetrics-hijacker"
+            class="Blogging element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/4d7be78ba496afa5655132368dbe3e5c.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Hubremetrics Hijacker</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/wilco-de-kreij"
+            class="Entertainment element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/06b6d29cceb5f239722e155f25edf085.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">Wilco de Kreij</h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
+          <a
+            href="http://localhost/wordpress/archives/recipe/legendary-hacks-of-airbnb-technology"
+            class="Business element-item h-[170px] md:h-[262px] flex flex-col justify-end rounded-xl bg-[url('http://localhost/wordpress/wp-content/uploads/2023/08/aedd388483151318a17506f2221e89da.png')] bg-cover bg-center p-3 md:p-5"
+          >
+            <h4 class="text-sm md:text-xl font-bold">
+              Legendary Hacks of AirBnB Technology
+            </h4>
+            <p class="text-xs md:text-sm">by saujana</p>
+          </a>
         </div>
       </div>
     </section>
@@ -530,7 +845,7 @@
           Get Latest Information about Hacker Growth TV
         </h2>
         <form
-          class="flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
+          class="flex flex-col space-y-3 md:space-y-0 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
         >
           <input
             class="h-12 rounded-full col-span-2 bg-white/30 placeholder:text-center md:placeholder:text-left md:bg-transparent placeholder:text-white md:focus:bg-transparent focus:outline-none md:pl-8"
@@ -550,12 +865,16 @@
     <!-- Blog -->
     <section class="py-8 px-4 md:py-24 md:px-24">
       <div class="max-w-screen-xl mx-auto">
-        <h2 class="text-4xl font-bold mb-16">Blog</h2>
+        <h2
+          class="text-center md:text-left text-xl md:text-4xl font-bold mb-8 md:mb-16"
+        >
+          Blog
+        </h2>
         <div class="grid grid-row-3 grid-cols-1 items-stretch">
           <article
-            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 space-y-reverse md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
-            <div class="col-span-3">
+            <div class="md:col-span-3">
               <div
                 class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
               >
@@ -563,10 +882,10 @@
                 <div class="">•</div>
                 <div class="">28 Jan 23</div>
               </div>
-              <h3 class="text-2xl font-semibold mb-4">
+              <h3 class="text-base md:text-2xl font-semibold mb-4">
                 Parenting Education for Your Child with Alexa Caroline
               </h3>
-              <p class="text-gray mb-5">
+              <p class="text-xs md:text-gray mb-5">
                 Parenting can be both rewarding and challenging. While it is
                 natural to want to provide love and support for our children, it
                 is also important to establish boundaries and set limits.
@@ -590,14 +909,14 @@
               </div>
             </div>
             <img
-              class="col-span-2 rounded-xl object-cover md:h-60"
+              class="md:col-span-2 rounded-xl object-cover md:h-60"
               src="https://www.figma.com/file/57dTccFWP2fuhDaR5wHaJJ/image/bb225e67865e1b6b4f29e96259a536bea23e244b?fuid=1006026373182984002"
             />
           </article>
           <article
-            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 space-y-reverse md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
-            <div class="col-span-3">
+            <div class="md:col-span-3">
               <div
                 class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
               >
@@ -605,10 +924,10 @@
                 <div class="">•</div>
                 <div class="">28 Jan 23</div>
               </div>
-              <h3 class="text-2xl font-semibold mb-4">
+              <h3 class="text-base md:text-2xl font-semibold mb-4">
                 Podcast to Grow Business
               </h3>
-              <p class="text-gray mb-5">
+              <p class="text-xs md:text-sm md:text-base text-gray mb-5">
                 Interview-style show: Invite experts and thought leaders in your
                 field to share their insights, experiences, and advice on
                 various topics related to your industry. Share your thoughts,
@@ -634,14 +953,14 @@
               </div>
             </div>
             <img
-              class="col-span-2 rounded-xl object-cover md:h-60"
+              class="md:col-span-2 rounded-xl object-cover md:h-60"
               src="https://s3-alpha-sig.figma.com/img/6fa6/016d/e0832f86751d141e98a39de5cc1ac3e7?Expires=1692576000&Signature=ear5aBH33yNIC2IHj8AzWTXKJ-uYd6-YB1xcANa9mjdLM-kq3xJAU3XNiL14C-9kFxu-hxMxldyHEhVldIOJ4DTW9hVH5agQ19aDRtZVA23QAUJSVLyz7jzQg~sVI0K7zKRmGo2D~NDIkMHsNERKTKxaWMaKZxqARtvO-iGl-uxyhMwRJfN5bxk4f~JM~SoJi0Q2JiyzACHb2TuzLh~k4q2OtFGFWVurtu5JJWBZws4rrRtSkmXWfIubyyNxrRWt1oJXr3Z7jOIz1BQ7eve69s42KoJw5D7BA5~J7-0kdBV49SmxGT4jOzajubym7rl3Je3kcMM5KXm9JORBmp8TRw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             />
           </article>
           <article
-            class="flex flex-col-reverse space-y-4 md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
+            class="flex flex-col-reverse space-y-4 space-y-reverse md:grid md:grid-cols-5 md:gap-x-24 items-stretch justify-items-stretch min-h-60 pb-8 mb-8 border-smoke border-b-2"
           >
-            <div class="col-span-3">
+            <div class="md:col-span-3">
               <div
                 class="flex flex-row space-x-2.5 text-orange text-base mb-1.5"
               >
@@ -649,7 +968,7 @@
                 <div class="">•</div>
                 <div class="">28 Jan 23</div>
               </div>
-              <h3 class="text-2xl font-semibold mb-4">
+              <h3 class="text-base md:text-2xl font-semibold mb-4">
                 Social Media Life in 4.0 Industry
               </h3>
               <p class="text-gray mb-5">
@@ -678,7 +997,7 @@
               </div>
             </div>
             <img
-              class="col-span-2 rounded-xl object-cover md:h-60"
+              class="md:col-span-2 rounded-xl object-cover md:h-60"
               src="https://s3-alpha-sig.figma.com/img/a0b1/4c64/a4bea0008581adfa61a41ba8c45966ad?Expires=1692576000&Signature=HIWtqn7J927GpDC6sj8zwv-d8gLAKUzjUSn467ptRnAqWjUtNIS6B04AsUAIBQTkrXQg~N6-tYabKN367mWrwnb7zW4oTMPEGkmXAgaVyoM2ajcbD~zj~vhpUC77bmUQj557Twf-IRLyUYxM71qaV5c~iQOMWO7ZoZF3o9frvc7c05X06NNicMhczE9wA0BuP6DtEB76lsxlPZak7K0NpdFMH~EiUitFAUutHIC3Bb3cggQFsq-0PhNhnKwF6RSkqQa34sKAhAtd72rN8~8mDZ2R1AIP0Rft33csVE6cGAUn0plw6Pns6F2EtqC7sI~wwBwhOLZdZZwXfmNxt8FUmw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             />
           </article>
@@ -819,7 +1138,7 @@
           </p>
         </div>
         <form
-          class="flex flex-col space-y-3 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
+          class="flex flex-col space-y-3 md:space-y-0 md:grid md:grid-cols-3 items-stretch justify-items-stretch text-base text-white rounded-full p-1 md:bg-white/30"
         >
           <input
             class="h-12 rounded-full col-span-2 bg-white/30 placeholder:text-center md:placeholder:text-left md:bg-transparent placeholder:text-white md:focus:bg-transparent focus:outline-none md:pl-8"
@@ -902,6 +1221,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script src="./assets/scripts/slider1.js"></script>
+    <script src="./assets/scripts/swiper1.js"></script>
   </body>
 </html>
