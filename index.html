@@ -247,8 +247,9 @@
           </h2>
           <div class="hidden md:flex flex-row space-x-5">
             <button
-              id="slide-prev"
-              class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
+              id="prev-btn"
+              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
+              onclick="moveToPreviousSlide()"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -264,8 +265,9 @@
               </svg>
             </button>
             <button
-              id="slide-next"
-              class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
+              id="next-btn"
+              class="w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
+              onclick="moveToNextSlide()"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -282,12 +284,17 @@
             </button>
           </div>
         </div>
-        <div class="mySwiper h-[450px] flex rounded-2xl overflow-hidden">
-          <div class="swiper-wrapper h-[450px] flex rounded-2xl">
+        <div
+          class="slide-container relative h-[450px] flex rounded-2xl overflow-hidden"
+        >
+          <div class="slides h-[450px] flex rounded-2xl space-x-7">
             <div
-              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+              class="slide h-full w-[800px] flex justify-items-stretch items-stretch object-center"
             >
-              <video class="h-full rounded-2xl" style="max-width: none">
+              <video
+                class="h-full w-[800px] rounded-2xl"
+                style="max-width: none"
+              >
                 <source
                   src="./assets/media/videoplayback.mp4"
                   type="video/mp4"
@@ -295,9 +302,12 @@
               </video>
             </div>
             <div
-              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+              class="slide h-full w-[800px] flex justify-items-stretch items-stretch object-center"
             >
-              <video class="h-full rounded-2xl" style="max-width: none">
+              <video
+                class="h-full w-[800px] rounded-2xl"
+                style="max-width: none"
+              >
                 <source
                   src="./assets/media/videoplayback.mp4"
                   type="video/mp4"
@@ -305,9 +315,12 @@
               </video>
             </div>
             <div
-              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+              class="slide h-full w-[800px] flex justify-items-stretch items-stretch object-center"
             >
-              <video class="h-full rounded-2xl" style="max-width: none">
+              <video
+                class="h-full w-[800px] rounded-2xl"
+                style="max-width: none"
+              >
                 <source
                   src="./assets/media/videoplayback.mp4"
                   type="video/mp4"
@@ -315,9 +328,12 @@
               </video>
             </div>
             <div
-              class="swiper-slide h-full flex justify-items-stretch items-stretch object-center"
+              class="slide h-full w-[800px] flex justify-items-stretch items-stretch object-center"
             >
-              <video class="h-full rounded-2xl" style="max-width: none">
+              <video
+                class="h-full w-[800px] rounded-2xl"
+                style="max-width: none"
+              >
                 <source
                   src="./assets/media/videoplayback.mp4"
                   type="video/mp4"
@@ -328,7 +344,7 @@
         </div>
         <div class="flex md:hidden flex-row justify-center space-x-5 pt-4">
           <button
-            id="slide-prev"
+            id="prev-btn"
             class="swiper-prev w-12 h-12 flex justify-center items-center rounded-full border-2 border-smoke hover:bg-smoke"
           >
             <svg
@@ -345,7 +361,7 @@
             </svg>
           </button>
           <button
-            id="slide-next"
+            id="next-btn"
             class="swiper-next w-12 h-12 flex justify-center items-center rounded-full border-2 border-orange hover:bg-orange"
           >
             <svg
@@ -1221,6 +1237,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script src="./assets/scripts/swiper1.js"></script>
+    <script src="./assets/scripts/slider1 copy.js"></script>
   </body>
 </html>

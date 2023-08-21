@@ -1,7 +1,6 @@
 const playBtn = document.getElementById("play");
 const video = document.getElementById("video");
 const progressbar = document.getElementById("progressbar");
-const timestamp = document.getElementById("timestamp");
 
 //------------------------------------------------------------------------
 function toggleVideoStatus() {
@@ -37,7 +36,6 @@ function updateProgressbar() {
   if (sec < 10) {
     sec = "0" + String(sec);
   }
-  timestamp.innerText = `${min}:${sec}`;
 }
 
 function dragProgressbar() {

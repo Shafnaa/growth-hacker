@@ -1,11 +1,12 @@
-const prevBtn = document.getElementById("slide-prev");
-const nextBtn = document.getElementById("slide-next");
-
-const slideContainer = document.querySelector(".slider-container");
+const slideContainer = document.querySelector(".slide-container");
 const slide = document.querySelector(".slides");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+const interval = 3000;
 
 let slides = document.querySelectorAll(".slide");
 let index = 1;
+let slideId;
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -16,13 +17,11 @@ lastClone.id = "last-clone";
 slide.append(firstClone);
 slide.prepend(lastClone);
 
-const slideWidth = slides[index].clientWidth;
+const slideWidth = slides[index].clientWidth + 28;
 
 slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-const getSlides = () => {
-  return document.querySelectorAll(".slide");
-};
+const getSlides = () => document.querySelectorAll(".slide");
 
 slide.addEventListener("transitionend", () => {
   slides = getSlides();
@@ -39,25 +38,24 @@ slide.addEventListener("transitionend", () => {
   }
 });
 
-const moveToNext = () => {
+const moveToNextSlide = () => {
   slides = getSlides();
   if (index >= slides.length - 1) return;
   index++;
-  slides[index].classList.remove("hidden");
-  slides[index + 1].classList.remove("hidden");
-  // slide.style.transition = ".7s ease-out";
-  // slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  slide.style.transition = ".7s ease-out";
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
-const moveToPrev = () => {
-  slides = getSlides();
+const moveToPreviousSlide = () => {
   if (index <= 0) return;
   index--;
-  slides[index].classList.remove("hidden");
-  slides[index + 1].classList.remove("hidden");
-  // slide.style.transition = ".7s ease-out";
-  // slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  slide.style.transition = ".7s ease-out";
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
-nextBtn.addEventListener("click", moveToNext);
-prevBtn.addEventListener("click", moveToPrev);
+slideContainer.addEventListener("mouseenter", () => {
+  clearInterval(slideId);
+});
+
+nextBtn.addEventListener("click", moveToNextSlide);
+prevBtn.addEventListener("click", moveToPreviousSlide);
